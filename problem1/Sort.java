@@ -22,8 +22,8 @@ class Sort {
 
         /*@ loop_invariant
           @   0 <= i && j < a.length &&
-          @   (\forall integer k; 0 <= k && k < i ==> a[k]==false) &&
-          @   (\forall integer k; j < k && k < a.length ==> a[k]==true);
+          @   (\forall integer k; k < i && 0 <= k && k < a.length ==> a[k]==false) &&
+          @   (\forall integer k; j < k && 0 <= k && k < a.length ==> a[k]==true);
           @ loop_variant j - i;
           @*/
         while (i <= j) {
